@@ -1,0 +1,14 @@
+In this file I wrote the explanation for the code
+
+The function to countRectangles works as follows:
+The countRectangles function iterates through the set of points four times to create all possible sets of 1,2,3 or 4 distinct points. For every set created it calls the 
+isRectangle function to see if the set creates a rectangle. If it does, then it is added in a set of sets. The count of possible rectangles is the size of this set of 
+sets. 
+
+The isRectangle function works as follows:
+First, it checks if the size of the given set is 4 (if it is less than that, it cannot form a rectangle and it cannot be above 4 by default). Then it converts the set to
+an array list and finds the indices of the minimum and maximum points of the list (where the minimum point is the bottom-left point of the rectangle, having the smallest 
+X and Y coordinates -- analog for maximum point which is the top-right point of the rectangle). Knowing the top-right and bottom-left points, in order for the set to form
+a rectangle, the other 2 points must be the top-left point and the bottom-right point, meaning that one point must have the X coordinate of the bottom-left point and the
+Y coordinate of the top-right point and the other point must have the Y coordinate of the bottom-left point and the X coordinate of the top-right point. If this is also
+true, then the set of points given as a parameter forms a rectangle.
